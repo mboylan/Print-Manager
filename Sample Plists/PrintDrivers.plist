@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>Drivers</key>
+		<array>
+			<dict>
+				<key>Name</key>
+				<string>Printer Company 1</string>
+				<key>Version</key>
+				<string>2.0</string>
+				<key>URL</key>
+				<string>http://school.edu/downloads/driver1.pkg</string>
+				<key>MD5</key>
+				<string>f76177fee5fd07e3fc8e9bbf8a51ffff</string>
+				<key>File</key>
+				<string>/Library/Printers/PrinterPlugin.plugin</string>
+				<key>Version Location</key>
+				<string>/Library/Printers/PrinterPlugin.plugin/Contents/Info.plist</string>
+				<key>Optional Installer Message</key>
+				<string>This install will take 45 years.</string>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>Printer Company 2</string>
+				<key>Version</key>
+				<string>3.0</string>
+				<key>URL</key>
+				<string>http://school.edu/downloads/driver2.pkg</string>
+				<key>MD5</key>
+				<string>f76177fee5fd07e3fc8e9bbf8a51aaaa</string>
+				<key>File</key>
+				<string>/var/db/receipts/com.company.driver2.bom</string>
+				<key>Version Location</key>
+				<string>/var/db/receipts/com.company.driver2.plist</string>
+				<key>Optional Installer Message</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+</plist>

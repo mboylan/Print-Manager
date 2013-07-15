@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>Printers</key>
+		<array>
+			<dict>
+				<key>Name</key>
+				<string>Printer 1</string>
+				<key>Queue Name</key>
+				<string>Printer1</string>
+				<key>Location</key>
+				<string>The Interwebs</string>
+				<key>Driver Path</key>
+				<string>/Library/Printers/PPDs/path/to/driver.gz</string>
+				<key>URL</key>
+				<string>url://printserver.school.edu/Printer1</string>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>Printer 2</string>
+				<key>Queue Name</key>
+				<string>Printer2</string>
+				<key>Location</key>
+				<string>The Interwebss</string>
+				<key>Driver Path</key>
+				<string>/Library/Printers/PPDs/path/to/driver.gz</string>
+				<key>URL</key>
+				<string>url://printserver.school.edu/Printer2</string>
+			</dict>
+		</array>
+	</dict>
+</plist>
