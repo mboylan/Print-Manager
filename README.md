@@ -68,7 +68,7 @@ Print Manager loops through both plists each time it runs, so requiring addition
 ## Optional Customizations
 If you'd like to separate printers by functional groups, the easiest way to do this is to add menu bar items under "View" for each group. Each menu bar item would be linked to a property that holds a true or false value. Before populating the table listing of available printers, the application would check the values of these properties and only show printers for groups that are checked. Each group would have its own plist on the company web server.
 
-A background image that includes a company logo should be added to the different views via an NSImageWell. There are two Photoshop files included in the Photoshop Files folder of the project. One is for regular displays and the other is for retina displays.
+A background image that includes a company logo should be added to the different views via modifying the existing NSImageViews. There are two Photoshop files included in the Background Images folder of the project. One is for regular displays and the other is for retina displays.
 
 An application icon should be added.
 
