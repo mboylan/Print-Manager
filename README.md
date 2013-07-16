@@ -75,6 +75,13 @@ An application icon should be added.
 ## Sparkle Updating
 The version of sparkle included with the project has the ability to verify application updates based on the Apple Developer ID code signature, or by signing updates with a key pair of which the public key [is included inside the application bundle](https://github.com/andymatuschak/Sparkle/wiki#3-segue-for-security-concerns). See "[Publishing an Update](https://github.com/andymatuschak/Sparkle/wiki/publishing-an-update)" on Andy Matuschak's GitHub for more information about publishing updates via Sparkle. The application, at a minimum, needs the `SUFeedURL` key of its Info.plist file modified to reflect the location of your appcast.
 
+## Security Concerns
+Because the application loops through every driver listed in the `PrintDrivers.plist` file and downloads and installs each one, it's important that at least this file be served over https. If a certificate verification problem occurs during the TLS negotiation, curl will exit with an error which will cause the application to present the error view (and not download and install the drivers). 
+
+Downloaded drivers are verified against the MD5 checksums listed in the `PrintDrivers.plist` file. If you can ensure the integrity of this file at the time of download, you can be reasonably certain that the MD5 checksums that the downloads are being verified against are valid.
+
+Sparkle updates are signed using either a custom private key or the private key linked to an Apple Developer ID Application certificate. They're verified using either a public key embedded inside the application or by verifying the Apple Developer ID code signature. More specifically, Sparkle will verify that the new version's author matches the old version's author. If you choose to use the custom keypair, because you already have the public key embedded in the application at your disposal, you could be clever and possibly sign your plist(s) and verify them using that key as well.
+
 ## Known Limitations
 * **All** required drivers in the `PrintDrivers.plist` file are downloaded and installed before the printer listing is shown to the end user.
 * The options portion of the `lpadmin` command is currently hardcoded as `-o printer-is-shared=false`. With minimal code changes and an extra key added to the `Printers.plist` file, this options string could become dynamic.

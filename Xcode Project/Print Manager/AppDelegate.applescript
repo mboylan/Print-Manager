@@ -106,7 +106,7 @@ script AppDelegate
 	
 	on beginBtnClickAfterDelay_(sender)
 		-- Change school.edu here to the location of your web server
-		if fetchLatestPlist("http://school.edu/downloads/PrintDrivers.plist") then
+		if fetchLatestPlist("https://school.edu/downloads/PrintDrivers.plist") then
 			processDownloadedDriversPlist()
 		else
 			log "Unable to download latest driver plist. Bailing out."
@@ -153,16 +153,16 @@ script AppDelegate
 			-- Change school.edu to your web server here
 			-- Commented out is how you might do printers by groups
 			--if shouldDownloadOtherPrinters is 0 then
-			if fetchLatestPlist("http://school.edu/downloads/Printers.plist") then
+			if fetchLatestPlist("https://school.edu/downloads/Printers.plist") then
 				processDownloadedPrinterList("/tmp/Printers.plist")
 			else
 				log "Error downloading printers list."
 				set weHadAnError to 1
 			end if
 			--else
-			--	if fetchLatestPlist("http://school.edu/downloads/Printers.plist") then
+			--	if fetchLatestPlist("https://school.edu/downloads/Printers.plist") then
 			--		processDownloadedPrinterList("/tmp/Printers.plist")
-			--		if fetchLatestPlist("http://school.edu/downloads/OtherPrinters.plist") then
+			--		if fetchLatestPlist("https://school.edu/downloads/OtherPrinters.plist") then
 			--			processDownloadedPrinterList("/tmp/OtherPrinters.plist")
 			--		else
 			--			log "Error downloading other printers list, but successfully downloaded printers list."
